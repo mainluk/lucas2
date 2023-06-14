@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Catalog</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='css/visual.css')}}">
+  <style>
+    html, body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(71 85 105);
+    }
+
+    .card {
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .card-img-top {
+        flex-grow: 1;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .card-title {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .card-text {
+        font-size: 14px;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+        background-color: #0069d9;
+        border-color: #0062cc;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#">Catálogo de Filmes</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Início</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/filmes">Filmes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/registro">cadastro</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/login">login</a>
+      </li>
+    </ul>
+    <form id="form" class="form-inline ml-auto" action="{{ url_for('buscar_filme') }}" method="POST">
+      <label for="titulo">Título do Filme:</label>
+      <input type="text" id="titulo" name="titulo" class="form-control mr-sm-2">
+      <button type="submit" class="btn btn-primary my-2 my-sm-0">Consultar</button>
+    </form>
+  </div>
+</nav>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/juliatela.css">
+    <title>Document</title>
+    
+</head>
+<body>
+  <nav class = "navbar navbar-expand-lg navbar-light bg-light">
+    <a class = "navbar-brand" href = "#">Movie Catalog</a>
+  <button class = "navbar-toggler" type = "button" data-toggle = "collapse">
+    <span class = "navbar-toggler-icon"></span> 
+  </button>
+
+    <div class = "collapse navbar-collapse" id = "navbarNav">
+      <ul class = "navbar-nav">
+        <li class = "nav-item active">
+          <a class = "nav-link" href = "#">Início</a>
+        </li>
+        
+        <li class = "nav-item">
+          <a class = "nav-link" href = "#">Sobre</a>
+        </li>
+
+        <li class = "nav-item">
+          <a class = "nav-link" href = "#">Filmes</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+    <div class="nome bg-light text-center" >
+        
+        <h1 class="bgcatalogo">Movie Catalog</h1>
+    </div>
+
+<div class="container custom-bg">
+    <div class="container">
+      
+            <div class="row ">
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="../static/img/legitmo_rei.jpg" class="card-img-top" alt="Imagem do card">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-body text-white">
+                        <h5 class="card-title">legitimo rei</h5>
+                        <p>Na escórcia no século 14, Robert the Bruce reinvidica o trono e lidera uma violenta revolta pela independência contra o domínio inglês.</p>
+                        <h5>Título do Card</h5>
+                        <p>Texto do Card</p>
+                        
+                    </div>
+                    <div class="rating">
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5"></label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4"></label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3"></label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2"></label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1"></label>
+                    </div>
+                </div>
+            </div>
+            <div>           
+            </div>
+
+    </div>
+</div>
+<div class="container custom-bg-bottom">
+    <div class="container">
+        <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <!-- Primeira coluna -->
+                <form id="formulario">
+                  <div class="mb-3">
+                    <label for="name-input" class="form-label">Seu nome</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Seu nome" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="comment-input" class="form-label">Digite seu comentário</label>
+                    <input class="form-control" id="inputText" placeholder="Digite seu comentário" required></input>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-primary">Postar</button>
+                  </div>
+                </form>
+                <div class="d-flex justify-content-center">
+                
+                </div>
+                
+              </div>
+
+              <div class="col-md-6">
+  
+                <!-- Segunda coluna (Formulário) -->
+                <div class="rating">
+                    <input type="radio" id="star5-comment1" name="rating-comment1" value="5">
+                    <label for="star5-comment1"></label>
+                    <input type="radio" id="star4-comment1" name="rating-comment1" value="4">
+                    <label for="star4-comment1"></label>
+                    <input type="radio" id="star3-comment1" name="rating-comment1" value="3">
+                    <label for="star3-comment1"></label>
+                    <input type="radio" id="star2-comment1" name="rating-comment1" value="2">
+                    <label for="star2-comment1"></label>
+                    <input type="radio" id="star1-comment1" name="rating-comment1" value="1">
+                    <label for="star1-comment1"></label>
+                  </div>
+                  <div class="comment">
+                    <p>Quantas estrelas esse filme merece ?</p>
+                    <div class="rating-value">Avaliação: <span id="rating-value-comment1">0</span></div>
+                  </div>
+                  
+              </div>

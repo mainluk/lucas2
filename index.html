@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo_login2.css" >
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div>
+        <section>
+            <div class="form-box">
+                <div class="form-value">
+                    <form action="/login" method="POST"> 
+                        <h2>Bem-vindo</h2>
+                        <div class="inputbox">
+                            <ion-icon name="people-outline"></ion-icon>
+                            <input type="name" name=input_nome required>
+                            <label for="">Usuario</label>
+                        </div>
+                        <div class="inputbox">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                            <input type="password" name=input_senha required>
+                            <label for="">Senha</label>
+                        </div>
+                        <div class="forget">
+                            <label for=""><input type="checkbox">Lembrar ou <a href="#">Redefinir-senha</a></label>
+
+                        </div>
+                        <button type="submit">Entrar</button>
+                        <div class="register">
+                            <p><a href="registro" name="registro">Registrar-se</a></p>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+        <div class="grade"></div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

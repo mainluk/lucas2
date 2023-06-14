@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./desaine.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+    <div class="nome bg-light text-center" >
+        <button class="close-button">&times;</button>
+        <h1 class="bgcatalogo">Movie Catalog</h1>
+    </div>
+<div class="container custom-bg">
+    <div class="container">
+
+            <div class="row ">
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="./legitimo/legitmo rei.jpg" class="card-img-top" alt="Imagem do card">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-body text-white">
+                        <h5 class="card-title">legitimo rei</h5>
+                        <p>Na escórcia no século 14, Robert the Bruce reinvidica o trono e lidera uma violenta revolta pela independência contra o domínio inglês.</p>
+                        <h5>Título do Card</h5>
+                        <p>Texto do Card</p>
+                        
+                    </div>
+                    <div class="rating">
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5"></label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4"></label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3"></label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2"></label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1"></label>
+                    </div>
+                </div>
+            </div>
+            <div>           
+            </div>
+
+    </div>
+</div>
+<div class="container custom-bg-bottom">
+    <div class="container">
+        <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <!-- Primeira coluna -->
+                <form id="comment-form">
+                  <div class="mb-3">
+                    <label for="name-input" class="form-label">Seu nome</label>
+                    <input type="text" class="form-control" id="name-input" placeholder="Seu nome" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="comment-input" class="form-label">Digite seu comentário</label>
+                    <textarea class="form-control" id="comment-input" placeholder="Digite seu comentário" required></textarea>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-primary">Postar</button>
+                  </div>
+                </form>
+                <div class="d-flex justify-content-center">
+                
+                </div>
+                
+              </div>
+
+              <div class="col-md-6">
+  
+                <!-- Segunda coluna (Formulário) -->
+                <div class="rating">
+                    <input type="radio" id="star5-comment1" name="rating-comment1" value="5">
+                    <label for="star5-comment1"></label>
+                    <input type="radio" id="star4-comment1" name="rating-comment1" value="4">
+                    <label for="star4-comment1"></label>
+                    <input type="radio" id="star3-comment1" name="rating-comment1" value="3">
+                    <label for="star3-comment1"></label>
+                    <input type="radio" id="star2-comment1" name="rating-comment1" value="2">
+                    <label for="star2-comment1"></label>
+                    <input type="radio" id="star1-comment1" name="rating-comment1" value="1">
+                    <label for="star1-comment1"></label>
+                  </div>
+                  <div class="comment">
+                    <p>Quantas estrelas esse filme merece ?</p>
+                    <div class="rating-value">Avaliação: <span id="rating-value-comment1">0</span></div>
+                  </div>
+                  
+              </div>
+            </div>
+          </div>
+          
+    <div class="d-flex  mt-5">
+        <div class="d-flex justify-content-center">
+          <div class="rounded-2 bg-white p-3 w-50 mt-5" id="comments-container">
+              <h5 class="text-center mb-3"> comentarios</h5>
+          </div>
+        </div>
+    </div>
+</div>
+<script>
+var ratingInputs = document.querySelectorAll('.rating input');
+
+for (var i = 0; i < ratingInputs.length; i++) {
+  ratingInputs[i].addEventListener('change', function() {
+    var commentId = this.getAttribute('name').replace('rating-', '');
+    var ratingValue = this.value;
+
+    var ratingValueElement = document.getElementById('rating-value-' + commentId);
+    ratingValueElement.textContent = ratingValue;
+  });
+  
+}
+
+</script>
+
+<script>
+    document.getElementById('comment-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita o comportamento padrão de envio do formulário
+
+    // Obtém os valores dos campos de entrada
+    var name = document.getElementById('name-input').value;
+    var comment = document.getElementById('comment-input').value;
+
+    // Cria um novo elemento de parágrafo para exibir o nome e o comentário
+    var paragraph = document.createElement('p');
+    paragraph.textContent = name + ': ' + comment;
+    paragraph.classList.add('comment-text'); // Adiciona a classe CSS "comment-text"
+
+    // Adiciona o parágrafo ao elemento de contêiner de comentários
+    var commentsContainer = document.getElementById('comments-container');
+    commentsContainer.appendChild(paragraph);
+
+    // Limpa os campos de entrada
+    document.getElementById('name-input').value = '';
+    document.getElementById('comment-input').value = '';
+  });
+
+</script>
+
+
+</body>
+
+
+</html>
